@@ -1,6 +1,12 @@
 from __future__ import print_function
 import socket
+# import threading
 import sys
+# from multiprocessing import Queue
+
+# NUMBER_OF_THREADS = 2
+# JOB_NUMBER = [1, 2]
+# queue = Queue()
 
 
 def socket_create():
