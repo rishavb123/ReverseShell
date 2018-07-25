@@ -16,7 +16,7 @@ def socket_create():
         global s
 
         host = ''
-        port = 9999
+        port = 9991
         s = socket.socket()
     except socket.error as msg:
         print("Socket creation error: " + str(msg))
