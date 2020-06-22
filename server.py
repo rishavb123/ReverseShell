@@ -38,7 +38,7 @@ def send_commands(conn):
             s.close()
             sys.exit()
         if len(cmd) > 0:
-            conn.send(cmd)
+            conn.send(bytes(cmd, 'utf-8'))
             client_reponse = str(conn.recv(1024), 'utf-8')
             print(client_reponse, end="")
 
