@@ -47,7 +47,7 @@ def socket_accept():
 
 def send_commands(conn):
     while True:
-        cmd = raw_input()
+        cmd = input()
         if cmd == 'quit':
             conn.close()
             s.close()
